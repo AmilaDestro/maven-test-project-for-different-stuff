@@ -1,0 +1,21 @@
+# Default ignored files
+/shelf/
+/.idea/
+/target
+.mvn/
+logs/
+
+### STS ###
+.apt_generated
+.classpathg
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/**
+*.iws
+*.iml
+*.ipr
