@@ -30,6 +30,17 @@ public class PalindromeSearcher implements Palindromic {
         return builder.toString().equals(stringWithoutSpaces);
     }
 
+    public boolean isPalindromeNoExtraLibraries(final String stringToCheck) {
+        final char[] chars = getStringWithoutSpaces(stringToCheck).toCharArray();
+
+        for (int i = 0, j = chars.length - 1; i < chars.length && j >= 0; i++, j--) {
+            if (!String.valueOf(chars[i]).equalsIgnoreCase(String.valueOf(chars[j]))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean isPalindromeUsingApacheCommon(final String stringToCheck) {
         final String stringWithoutSpaces = getStringWithoutSpaces(stringToCheck);
         final String reversedString = StringUtils.reverse(stringWithoutSpaces);
