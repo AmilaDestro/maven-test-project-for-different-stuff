@@ -18,9 +18,9 @@ public class PalindromeCheckerTestSteps {
         this.valueToCheck = valueToCheck;
     }
 
-    @When("^I check the passed String parameter by isPalindrome function$")
+    @When("^I check the passed String parameter by any isPalindrome function$")
     public void check_if_the_string_is_palindrome() {
-        checkResult = palindromicInstance.isPalindrome(valueToCheck);
+        checkResult = ((PalindromeSearcher) palindromicInstance).isPalindromeNoExtraLibraries(valueToCheck);
     }
 
     @Then("^it returns the result (\\S+)$")

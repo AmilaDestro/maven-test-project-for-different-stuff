@@ -5,7 +5,7 @@ Feature: Palindromic
 
     Scenario Outline: Check if any String <valueToCheck> is palindrome <checkResult> ignoring its case and spaces
       Given the String with value <valueToCheck>
-      When I check the passed String parameter by isPalindrome function
+      When I check the passed String parameter by any isPalindrome function
       Then it returns the result <checkResult>
 
       Examples:
