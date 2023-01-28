@@ -1,4 +1,4 @@
-package soloviova.mila.cucumber;
+package soloviova.mila.cucumber.stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,17 +13,17 @@ public class PalindromeCheckerTestSteps {
     private String valueToCheck;
     private Boolean checkResult;
 
-    @Given("^the String with value (\\w*\\s*\\w*)$")
+    @Given("the String with {string} value")
     public void init_string_value_to_check(final String valueToCheck) {
         this.valueToCheck = valueToCheck;
     }
 
-    @When("^I check the passed String parameter by any isPalindrome function$")
+    @When("I check the passed String parameter by any isPalindrome function")
     public void check_if_the_string_is_palindrome() {
         checkResult = ((PalindromeSearcher) palindromicInstance).isPalindromeNoExtraLibraries(valueToCheck);
     }
 
-    @Then("^it returns the result (\\S+)$")
+    @Then("it returns the result {string}")
     public void verify_result(final String expectedResult) {
         assertEquals(checkResult, Boolean.parseBoolean(expectedResult));
     }
